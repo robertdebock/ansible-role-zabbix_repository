@@ -1,0 +1,38 @@
+---
+# tasks file for zabbix_repository
+- name: test variables and environment
+  assert:
+    that:
+      - ansible_distribution == "CentOS" or
+        ansible_distribution == "Debian" or
+        ansible_distribution == "Ubuntu"
+
+- name: install (dnf/yum)
+  package:
+    name: "{{ zabbix_repository_package }}"
+    state: "{{ zabbix_repository_package_state }}"
+  register: zabbix_repository_install_dnf_yum
+  retries: 3
+  until: zabbix_repository_install_dnf_yum is succeeded
+  when:
+    - ansible_pkg_mgr == "dnf" or
+      ansible_pkg_mgr == "yum"
+
+- name: install (apt)
+  apt:
+    deb: "{{ zabbix_repository_package }}"
+  register: zabbix_repository_install_apt
+  retries: 3
+  until: zabbix_repository_install_apt is succeeded
+  when:
+    - ansible_pkg_mgr == "apt"
+  notify:
+    - update cache
+
+- name: create /etc/zabbix
+  file:
+    path: /etc/zabbix
+    state: directory
+
+- name: flush handlers
+  meta: flush_handlers
