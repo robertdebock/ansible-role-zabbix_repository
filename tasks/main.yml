@@ -6,6 +6,11 @@
       - ansible_distribution == "CentOS" or
         ansible_distribution == "Debian" or
         ansible_distribution == "Ubuntu"
+      - zabbix_repository_version_major is version
+      - zabbix_repository_version_minor => 1
+      - zabbix_repository_package_state == "absent" or
+        zabbix_repository_package_state == "latest" or
+        zabbix_repository_package_state == "present"
 
 - name: install (dnf/yum)
   package:
