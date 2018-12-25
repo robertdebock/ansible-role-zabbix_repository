@@ -3,5 +3,6 @@
 - name: update cache
   apt:
     update_cache: yes
-  register: result
+  register: update_cache
   retries: 3
+  until: update_cache is succeeded
