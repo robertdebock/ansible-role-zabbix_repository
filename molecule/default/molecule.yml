@@ -32,8 +32,6 @@ platforms:
     image: fedora:rawhide
   - name: zabbix_repository-opensuse-leap
     image: opensuse:leap
-  - name: zabbix_repository-opensuse-tumbleweed
-    image: opensuse:tumbleweed
   - name: zabbix_repository-ubuntu-latest
     image: ubuntu:latest
   - name: zabbix_repository-ubuntu-rolling
