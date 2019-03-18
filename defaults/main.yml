@@ -6,6 +6,3 @@ zabbix_repository_version_major: 4.0
 
 # The `zabbix_version_minor` is a single numerical value.
 zabbix_repository_version_minor: 1
-
-# To update all packages installed by this roles, set `zabbix_repository_package_state` to `latest`.
-zabbix_repository_package_state: present
