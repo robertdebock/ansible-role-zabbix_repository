@@ -17,7 +17,8 @@ galaxy_info:
         - 7
     - name: Ubuntu
       versions:
-        - artful
+        - trusty
+        - xenial
         - bionic
 
   galaxy_tags:
