@@ -109,7 +109,6 @@ Some variarations of the build matrix do not work. These are the variations and 
 | Fedora | Zabbix has [limited OS support](https://www.zabbix.com/download). |
 | openSUSE | Zabbix has [limited OS support](https://www.zabbix.com/download). |
 | Ubuntu rolling | Zabbix has [limited OS support](https://www.zabbix.com/download). |
-
 Included version(s)
 -------------------
 
