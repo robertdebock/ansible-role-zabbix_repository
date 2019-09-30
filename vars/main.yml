@@ -1,6 +1,5 @@
 ---
 # vars file for zabbix_repository
-
 # The "zabbix_repository_version" is the whole version of Zabbix.
 zabbix_repository_version: "{{ zabbix_repository_version_major }}.{{ zabbix_repository_version_minor }}-1"
 
