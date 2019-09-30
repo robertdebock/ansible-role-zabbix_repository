@@ -6,6 +6,9 @@ zabbix_repository
 
 Install and configure zabbix_repository on your system.
 
+<img src="https://img.shields.io/ansible/role/d/35755"/>
+<img src="https://img.shields.io/ansible/quality/35755"/>
+
 Example Playbook
 ----------------
 
@@ -62,6 +65,16 @@ The following roles can be installed to ensure all requirements are met, using `
 ---
 - robertdebock.bootstrap
 
+```
+
+This role uses the following modules:
+```yaml
+---
+- apt
+- assert
+- file
+- meta
+- package
 ```
 
 Context
