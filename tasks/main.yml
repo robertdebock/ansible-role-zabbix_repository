@@ -1,12 +1,5 @@
 ---
 # tasks file for zabbix_repository
-- name: test variables and environment
-  assert:
-    that:
-      - ansible_distribution == "CentOS" or
-        ansible_distribution == "Debian" or
-        ansible_distribution == "Ubuntu"
-
 - name: install (dnf/yum)
   package:
     name: "{{ zabbix_repository_package }}"
