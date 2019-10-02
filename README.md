@@ -71,6 +71,7 @@ This role uses the following modules:
 ```yaml
 ---
 - apt
+- fail
 - file
 - meta
 - package

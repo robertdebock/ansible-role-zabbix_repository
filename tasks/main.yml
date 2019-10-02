@@ -5,8 +5,8 @@
     name: "{{ zabbix_repository_package }}"
     state: present
   register: zabbix_repository_install_dnf_yum
-  retries: 3
   until: zabbix_repository_install_dnf_yum is succeeded
+  retries: 3
   when:
     - ansible_pkg_mgr == "dnf" or
       ansible_pkg_mgr == "yum"
@@ -15,12 +15,19 @@
   apt:
     deb: "{{ zabbix_repository_package }}"
   register: zabbix_repository_install_apt
-  retries: 3
   until: zabbix_repository_install_apt is succeeded
+  retries: 3
   when:
     - ansible_pkg_mgr == "apt"
   notify:
     - update cache
+
+- name: fail when both yum/dnf and apt are skipped
+  fail:
+    msg: "This system does not support yum, dnf or apt."
+  when:
+    - zabbix_repository_install_dnf_yum is skipped
+    - zabbix_repository_install_apt is skipped
 
 - name: create /etc/zabbix
   file:
