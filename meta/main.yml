@@ -11,10 +11,19 @@ galaxy_info:
     - name: Debian
       versions:
         - all
+    - name: Debian
+      versions:
+        - all
     - name: EL
       versions:
         - 7
         - 8
+    - name: OpenSUSE
+      versions:
+        - all
+    - name: SLES
+      verions:
+        - all
     - name: Ubuntu
       versions:
         - trusty
@@ -24,10 +33,5 @@ galaxy_info:
   galaxy_tags:
     - zabbix
     - repository
-    - centos
-    - debian
-    - el
-    - rhel
-    - ubuntu
 
 dependencies: []

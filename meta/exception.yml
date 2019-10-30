@@ -4,13 +4,7 @@ exceptions:
     reason: Zabbix has [limited OS support](https://www.zabbix.com/download).
   - variation: Archlinux
     reason: Zabbix has [limited OS support](https://www.zabbix.com/download).
-  - variation: CentOS 8
-    reason: Zabbix has [limited OS support](https://www.zabbix.com/download).
-  - variation: Debian
-    reason: Zabbix has [limited OS support](https://www.zabbix.com/download).
   - variation: Fedora
-    reason: Zabbix has [limited OS support](https://www.zabbix.com/download).
-  - variation: openSUSE
     reason: Zabbix has [limited OS support](https://www.zabbix.com/download).
   - variation: Ubuntu rolling
     reason: Zabbix has [limited OS support](https://www.zabbix.com/download).
