@@ -22,12 +22,24 @@
   notify:
     - update cache
 
-- name: fail when both yum/dnf and apt are skipped
+- name: install (zypper}
+  zypper:
+    name: "{{ zabbix_repository_package }}"
+    state: present
+    disable_gpg_check: yes
+  register: zabbix_repository_install_zypper
+  until: zabbix_repository_install_zypper is succeeded
+  retries: 3
+  when:
+    - ansible_pkg_mgr == "zypper"
+
+- name: fail when yum/dnf, apt and zypper are skipped
   fail:
     msg: "This system does not support yum, dnf or apt."
   when:
     - zabbix_repository_install_dnf_yum is skipped
     - zabbix_repository_install_apt is skipped
+    - zabbix_repository_install_zypper is skipped
 
 - name: create /etc/zabbix
   file:

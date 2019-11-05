@@ -165,6 +165,7 @@ This role uses the following modules:
 - file
 - meta
 - package
+- zypper
 ```
 
 License
