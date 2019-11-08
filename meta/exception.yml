@@ -8,3 +8,5 @@ exceptions:
     reason: Zabbix has [limited OS support](https://www.zabbix.com/download).
   - variation: Ubuntu rolling
     reason: Zabbix has [limited OS support](https://www.zabbix.com/download).
+  - variation: amazonlinux
+    reason: Zabbix has [limited OS support](https://www.zabbix.com/download)

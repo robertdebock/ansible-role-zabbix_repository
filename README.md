@@ -80,8 +80,6 @@ This role has been tested on these [container images](https://hub.docker.com/):
 
 |container|tag|allow_failures|
 |---------|---|--------------|
-|amazonlinux|1|no|
-|amazonlinux|latest|no|
 |debian|unstable|yes|
 |debian|latest|no|
 |debian|unstable|yes|
@@ -106,6 +104,7 @@ Some variarations of the build matrix do not work. These are the variations and 
 | Archlinux | Zabbix has [limited OS support](https://www.zabbix.com/download). |
 | Fedora | Zabbix has [limited OS support](https://www.zabbix.com/download). |
 | Ubuntu rolling | Zabbix has [limited OS support](https://www.zabbix.com/download). |
+| amazonlinux | Zabbix has [limited OS support](https://www.zabbix.com/download) |
 
 Included version(s)
 -------------------
