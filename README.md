@@ -47,7 +47,6 @@ After running this role, this playbook runs to verify that everything works, thi
         name: zabbix-get
         state: present
 ```
-```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
 
