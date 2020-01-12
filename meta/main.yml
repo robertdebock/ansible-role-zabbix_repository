@@ -21,13 +21,8 @@ galaxy_info:
     - name: OpenSUSE
       versions:
         - all
-    - name: SLES
-      versions:
-        - all
     - name: Ubuntu
       versions:
-        - trusty
-        - xenial
         - bionic
 
   galaxy_tags:
