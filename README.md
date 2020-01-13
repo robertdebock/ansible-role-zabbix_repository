@@ -98,7 +98,6 @@ This role has been tested on these [container images](https://hub.docker.com/):
 |container|tags|
 |---------|----|
 |debian|all|
-|debian|all|
 |el|7, 8|
 |opensuse|all|
 |ubuntu|bionic|
