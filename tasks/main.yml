@@ -7,9 +7,6 @@
   package:
     name: "{{ zabbix_repository_package }}"
     state: present
-  register: zabbix_repository_install_dnf_yum
-  until: zabbix_repository_install_dnf_yum is succeeded
-  retries: 3
   when:
     - ansible_pkg_mgr == "dnf" or
       ansible_pkg_mgr == "yum"
@@ -17,9 +14,6 @@
 - name: install (apt)
   apt:
     deb: "{{ zabbix_repository_package }}"
-  register: zabbix_repository_install_apt
-  until: zabbix_repository_install_apt is succeeded
-  retries: 3
   when:
     - ansible_pkg_mgr == "apt"
   notify:
@@ -30,9 +24,6 @@
     name: "{{ zabbix_repository_package }}"
     state: present
     disable_gpg_check: yes
-  register: zabbix_repository_install_zypper
-  until: zabbix_repository_install_zypper is succeeded
-  retries: 3
   when:
     - ansible_pkg_mgr == "zypper"
 
