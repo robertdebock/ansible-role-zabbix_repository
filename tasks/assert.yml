@@ -4,6 +4,7 @@
     that:
       - zabbix_repository_version_major is defined
       - zabbix_repository_version_major | length > 0
+    quiet: yes
 
 - name: test if zabbix_repository_version_minor is set correctly
   assert:
@@ -11,3 +12,4 @@
       - zabbix_repository_version_minor is defined
       - zabbix_repository_version_minor | int
       - zabbix_repository_version_minor | int >= 0
+    quiet: yes
