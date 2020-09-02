@@ -3,14 +3,20 @@
 - name: include assert.yml
   include_tasks: assert.yml
 
+- name: install rpm key
+  rpm_key:
+    key: "https://repo.zabbix.com/RPM-GPG-KEY-ZABBIX"
+    state: present
+  when:
+    - ansible_pkg_mgr in [ "dnf", "yum", "zypper" ]
+
 - name: install (dnf/yum)
   package:
     name: "{{ zabbix_repository_package }}"
     state: present
   register: zabbix_repository_install_dnf_yum
   when:
-    - ansible_pkg_mgr == "dnf" or
-      ansible_pkg_mgr == "yum"
+    - ansible_pkg_mgr in [ "dnf", "yum" ]
 
 - name: install (apt)
   apt:
