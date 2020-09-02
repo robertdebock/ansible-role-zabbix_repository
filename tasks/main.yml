@@ -5,7 +5,7 @@
 
 - name: install rpm key
   rpm_key:
-    key: "https://repo.zabbix.com/RPM-GPG-KEY-ZABBIX"
+    key: "https://repo.zabbix.com/RPM-GPG-KEY-ZABBIX-A14FE591"
     state: present
   when:
     - ansible_pkg_mgr in [ "dnf", "yum", "zypper" ]
