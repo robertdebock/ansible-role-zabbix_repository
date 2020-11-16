@@ -3,7 +3,6 @@
   assert:
     that:
       - zabbix_repository_version_major is defined
-      - zabbix_repository_version_major | length > 0
     quiet: yes
 
 - name: test if zabbix_repository_version_minor is set correctly
