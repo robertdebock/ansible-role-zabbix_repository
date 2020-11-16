@@ -10,5 +10,5 @@
     that:
       - zabbix_repository_version_minor is defined
       - zabbix_repository_version_minor is number
-      - zabbix_repository_version_minor | int >= 0
+      - zabbix_repository_version_minor >= 0
     quiet: yes
