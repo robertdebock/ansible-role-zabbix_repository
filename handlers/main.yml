@@ -1,5 +1,6 @@
 ---
 # handlers file for zabbix_repository
+
 - name: update cache
   apt:
     update_cache: yes
