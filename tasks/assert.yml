@@ -1,4 +1,5 @@
 ---
+
 - name: test if zabbix_repository_version_major is set correctly
   assert:
     that:
