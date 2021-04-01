@@ -6,7 +6,7 @@
 
   tasks:
     - name: install a zabbix package
-      package:
+      ansible.builtin.package:
         name: zabbix-get
         state: present
       loop:
