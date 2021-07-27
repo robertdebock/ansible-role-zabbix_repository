@@ -4,7 +4,7 @@
 # The "zabbix_repository_version" is the whole version of Zabbix.
 zabbix_repository_version: "{{ zabbix_repository_version_major }}.{{ zabbix_repository_version_minor }}-1"
 
-zabbix_url_start: "https://repo.zabbix.com/zabbix/{{ zabbix_repository_version_major }}"
+zabbix_url_start: "http://repo.zabbix.com/zabbix/{{ zabbix_repository_version_major }}"
 
 _zabbix_repository_package:
   Debian: "{{ zabbix_url_start }}/debian/pool/main/z/zabbix-release/zabbix-release_{{ zabbix_repository_version_major }}-{{ zabbix_repository_version_minor }}+{{ ansible_distribution | lower }}{{ ansible_distribution_major_version }}_all.deb"
