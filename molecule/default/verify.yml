@@ -7,9 +7,10 @@
   tasks:
     - name: install a zabbix package
       ansible.builtin.package:
-        name: zabbix-get
+        name: "{{ item }}"
         state: present
       loop:
+        - zabbix-get
         - zabbix-server-mysql
         - zabbix-frontend-php
         - zabbix-apache-conf
