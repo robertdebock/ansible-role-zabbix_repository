@@ -14,4 +14,3 @@
         - zabbix-server-mysql
         - zabbix-apache-conf
         - zabbix-agent
-        - zabbix-proxy
