@@ -4,7 +4,7 @@ Install and configure zabbix_repository on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-zabbix_repository/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-zabbix_repository/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-zabbix_repository/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-zabbix_repository)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/robertdebock/zabbix_repository)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/robertdebock/zabbix_repository)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-zabbix_repository.svg)](https://github.com/robertdebock/ansible-role-zabbix_repository/releases/)|
+|[![github](https://github.com/robertdebock/ansible-role-zabbix_repository/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-zabbix_repository/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-zabbix_repository/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-zabbix_repository)|[![quality](https://img.shields.io/ansible/quality/35755)](https://galaxy.ansible.com/robertdebock/zabbix_repository)|[![downloads](https://img.shields.io/ansible/role/d/35755)](https://galaxy.ansible.com/robertdebock/zabbix_repository)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-zabbix_repository.svg)](https://github.com/robertdebock/ansible-role-zabbix_repository/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -86,12 +86,6 @@ The minimum version of Ansible required is 2.10, tests have been done to:
 - The current version.
 - The development version.
 
-## [Included version(s)](#included-versions)
-
-This role [refers to a version](https://github.com/robertdebock/ansible-role-zabbix/blob/master/defaults/main.yml) released by Zabbix. Check the released version(s) here:
-- [Zabbix](https://www.zabbix.com/download).
-
-This version reference means a role may get outdated. Monthly tests occur to see if [bit-rot](https://en.wikipedia.org/wiki/Software_rot) occured. If you however find a problem, please create an issue, I'll get on it as soon as possible.
 
 If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-zabbix_repository/issues)
 
