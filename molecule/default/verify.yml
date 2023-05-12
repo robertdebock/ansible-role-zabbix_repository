@@ -5,7 +5,7 @@
   gather_facts: no
 
   tasks:
-    - name: install a zabbix package
+    - name: Install a zabbix package
       ansible.builtin.package:
         name: "{{ item }}"
         state: present
