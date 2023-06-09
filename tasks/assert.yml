@@ -5,6 +5,7 @@
     that:
       - zabbix_repository_version_major is defined
       - zabbix_repository_version_major is string
+      - zabbix_repository_version_major is not none
     quiet: yes
 
 - name: assert | Test if zabbix_repository_version_minor is set correctly
