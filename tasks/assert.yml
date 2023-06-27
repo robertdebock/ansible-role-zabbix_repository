@@ -15,3 +15,17 @@
       - zabbix_repository_version_minor is number
       - zabbix_repository_version_minor >= 0
     quiet: yes
+
+- name: assert | Test if zabbix_repository_cleanup_requirements is set correctly
+  ansible.builtin.assert:
+    that:
+      - zabbix_repository_cleanup_requirements is defined
+      - zabbix_repository_cleanup_requirements is boolean
+    quiet: yes
+
+- name: assert | Test if zabbix_repository_revert_crypto_policy is set correctly
+  ansible.builtin.assert:
+    that:
+      - zabbix_repository_revert_crypto_policy is defined
+      - zabbix_repository_revert_crypto_policy is boolean
+    quiet: yes

@@ -6,3 +6,5 @@
 
   roles:
     - role: ansible-role-zabbix_repository
+      zabbix_repository_cleanup_requirements: no
+      zabbix_repository_revert_crypto_policy: no

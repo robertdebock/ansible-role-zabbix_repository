@@ -19,6 +19,8 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
   roles:
     - role: robertdebock.zabbix_repository
+      zabbix_repository_cleanup_requirements: no
+      zabbix_repository_revert_crypto_policy: no
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/robertdebock/ansible-role-zabbix_repository/blob/master/molecule/default/prepare.yml):
@@ -46,10 +48,18 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 # defaults file for zabbix_repository
 
 # The`"zabbix_version_major` are two numerical values, sparated by a period.
-zabbix_repository_version_major: "5.4"
+zabbix_repository_version_major: "6.4"
 
 # The `zabbix_version_minor` is a single numerical value.
 zabbix_repository_version_minor: 1
+
+# An extra package is required for RHEL9 (`crypto-policies-scripts`).
+# This variable determines if it should be removed or not.
+zabbix_repository_cleanup_requirements: yes
+
+# The crypto policy must be modified on RHEL9. This variable determines if
+# the policy should be switched back to the default.
+zabbix_repository_revert_crypto_policy: yes
 ```
 
 ## [Requirements](#requirements)
