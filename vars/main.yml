@@ -17,6 +17,6 @@ zabbix_repository_package: "{{ _zabbix_repository_package[ansible_distribution] 
 _zabbix_rpm_key:
   default: "https://repo.zabbix.com/RPM-GPG-KEY-ZABBIX-08EFA7DD"
   RedHat:
-    8: "https://repo.zabbix.com/RPM-GPG-KEY-ZABBIX-A14FE591"
+    "8": "https://repo.zabbix.com/RPM-GPG-KEY-ZABBIX-A14FE591"
 
 zabbix_rpm_key: "{{ _zabbix_rpm_key[ansible_os_family][ansible_distribution_major_version] | default(_zabbix_rpm_key['default']) }}"
