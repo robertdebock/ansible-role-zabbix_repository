@@ -12,5 +12,4 @@
       loop:
         - zabbix-get
         - zabbix-server-mysql
-        - zabbix-apache-conf
         - zabbix-agent
