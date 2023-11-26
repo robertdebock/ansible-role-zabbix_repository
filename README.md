@@ -1,4 +1,4 @@
-# Ansible role [zabbix_repository](#zabbix_repository)
+# [Ansible role zabbix_repository](#zabbix_repository)
 
 Install and configure zabbix_repository on your system.
 
