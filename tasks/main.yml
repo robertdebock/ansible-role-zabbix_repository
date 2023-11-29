@@ -41,6 +41,7 @@
     - name: Install (dnf/yum) repository
       ansible.builtin.package:
         name: "{{ zabbix_repository_package }}"
+        disable_gpg_check: yes
         state: present
       register: zabbix_repository_install_dnf_yum
       when:
