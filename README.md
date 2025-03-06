@@ -18,7 +18,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   gather_facts: true
 
   roles:
-    - role: ansible-role-zabbix_repository
+    - role: robertdebock.zabbix_repository
       zabbix_repository_cleanup_requirements: false
       zabbix_repository_revert_crypto_policy: false
 ```
