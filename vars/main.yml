@@ -7,9 +7,9 @@ zabbix_repository_version: "{{ zabbix_repository_version_major }}.{{ zabbix_repo
 zabbix_url_start: "http://repo.zabbix.com/zabbix/{{ zabbix_repository_version_major }}"
 
 _zabbix_repository_package:
-  Debian: "{{ zabbix_url_start }}/{{ ansible_distribution | lower }}/pool/main/z/zabbix-release/zabbix-release_{{ zabbix_repository_version_major }}-{{ zabbix_repository_version_minor }}+{{ ansible_distribution | lower }}{{ ansible_distribution_major_version }}_all.deb"
-  RedHat: "{{ zabbix_url_start }}/rhel/{{ ansible_distribution_major_version }}/x86_64/zabbix-release-{{ zabbix_repository_version_major }}-{{ zabbix_repository_version_minor }}.el{{ ansible_distribution_major_version }}.noarch.rpm"
-  Suse: "{{ zabbix_url_start }}/sles/{{ ansible_distribution_major_version }}/x86_64/zabbix-release-{{ zabbix_repository_version_major }}-{{ zabbix_repository_version_minor }}.sles{{ ansible_distribution_major_version }}.noarch.rpm"
-  Ubuntu: "{{ zabbix_url_start }}/{{ ansible_distribution | lower }}/pool/main/z/zabbix-release/zabbix-release_{{ zabbix_repository_version_major }}-{{ zabbix_repository_version_minor }}+{{ ansible_distribution | lower }}{{ ansible_distribution_version }}_all.deb"
+  Debian: "{{ zabbix_url_start }}/{{ ansible_facts['distribution'] | lower }}/pool/main/z/zabbix-release/zabbix-release_{{ zabbix_repository_version_major }}-{{ zabbix_repository_version_minor }}+{{ ansible_facts['distribution'] | lower }}{{ ansible_facts['distribution_major_version'] }}_all.deb"
+  RedHat: "{{ zabbix_url_start }}/rhel/{{ ansible_facts['distribution_major_version'] }}/x86_64/zabbix-release-{{ zabbix_repository_version_major }}-{{ zabbix_repository_version_minor }}.el{{ ansible_facts['distribution_major_version'] }}.noarch.rpm"
+  Suse: "{{ zabbix_url_start }}/sles/{{ ansible_facts['distribution_major_version'] }}/x86_64/zabbix-release-{{ zabbix_repository_version_major }}-{{ zabbix_repository_version_minor }}.sles{{ ansible_facts['distribution_major_version'] }}.noarch.rpm"
+  Ubuntu: "{{ zabbix_url_start }}/{{ ansible_facts['distribution'] | lower }}/pool/main/z/zabbix-release/zabbix-release_{{ zabbix_repository_version_major }}-{{ zabbix_repository_version_minor }}+{{ ansible_facts['distribution'] | lower }}{{ ansible_facts['distribution_version'] }}_all.deb"
 
-zabbix_repository_package: "{{ _zabbix_repository_package[ansible_distribution] | default(_zabbix_repository_package[ansible_os_family]) }}"
+zabbix_repository_package: "{{ _zabbix_repository_package[ansible_facts['distribution']] | default(_zabbix_repository_package[ansible_facts['os_family']]) }}"
