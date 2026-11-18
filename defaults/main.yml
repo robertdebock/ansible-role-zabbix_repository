@@ -1,11 +1,12 @@
 ---
 # defaults file for zabbix_repository
 
-# The`"zabbix_version_major` are two numerical values, sparated by a period.
-zabbix_repository_version_major: "6.4"
+# The `zabbix_repository_version_major` are two numerical values, separated by a period.
+# Zabbix 6.4 has no packages for Debian 13, 7.0 is the current LTS release.
+zabbix_repository_version_major: "7.0"
 
-# The `zabbix_version_minor` is a single numerical value.
-zabbix_repository_version_minor: 1
+# The `zabbix_repository_version_minor` is the revision of the `zabbix-release` package, a single numerical value.
+zabbix_repository_version_minor: 5
 
 # An extra package is required for RHEL9 (`crypto-policies-scripts`).
 # This variable determines if it should be removed or not.
