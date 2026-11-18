@@ -56,6 +56,20 @@
       notify:
         - Update cache
 
+    # The distribution ships (older) zabbix packages with a higher version, prefer Zabbix' own repository.
+    - name: Prefer the Zabbix repository over the distribution packages
+      ansible.builtin.copy:
+        dest: /etc/apt/preferences.d/zabbix
+        content: |
+          Package: zabbix*
+          Pin: origin repo.zabbix.com
+          Pin-Priority: 1001
+        owner: root
+        group: root
+        mode: "0644"
+      when:
+        - ansible_facts['pkg_mgr'] == "apt"
+
     - name: Install (zypper) repository
       community.general.zypper:
         name: "{{ zabbix_repository_package }}"
