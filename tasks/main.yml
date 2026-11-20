@@ -10,7 +10,7 @@
 - name: Install zabbix repository
   when:
     - ansible_facts['distribution'] in [ "CentOS", "RedHat", "Rocky" ] or
-      ansible_os_family in [ "Debian", "Suse" ]
+      ansible_facts['os_family'] in [ "Debian", "Suse" ]
   block:
     - name: Manage crypto policy
       when:
