@@ -47,11 +47,12 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 ---
 # defaults file for zabbix_repository
 
-# The`"zabbix_version_major` are two numerical values, sparated by a period.
-zabbix_repository_version_major: "6.4"
+# The `zabbix_repository_version_major` are two numerical values, separated by a period.
+# Zabbix 6.4 has no packages for Debian 13, 7.0 is the current LTS release.
+zabbix_repository_version_major: "7.0"
 
-# The `zabbix_version_minor` is a single numerical value.
-zabbix_repository_version_minor: 1
+# The `zabbix_repository_version_minor` is the revision of the `zabbix-release` package, a single numerical value.
+zabbix_repository_version_minor: 5
 
 # An extra package is required for RHEL9 (`crypto-policies-scripts`).
 # This variable determines if it should be removed or not.
@@ -91,11 +92,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/r
 |[EL](https://hub.docker.com/r/robertdebock/enterpriselinux)|9|
 |[Debian](https://hub.docker.com/r/robertdebock/debian)|all|
 
-The minimum version of Ansible required is 2.12, tests have been done on:
-
-- The previous version.
-- The current version.
-- The development version.
+The minimum version of Ansible (ansible-core) required is 2.20, tests are done with the latest release of ansible-core.
 
 If you find issues, please register them on [GitHub](https://github.com/robertdebock/ansible-role-zabbix_repository/issues).
 
