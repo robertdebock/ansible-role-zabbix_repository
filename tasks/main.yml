@@ -26,13 +26,15 @@
         - name: Get current crypto policy
           ansible.builtin.command:
             cmd: update-crypto-policies --show
-          changed_when: false
+          changed_when:
+            - false
           register: elastic_repo_current_crypto_policy
 
         - name: Switch to legacy crypto policy
           ansible.builtin.command:
             cmd: update-crypto-policies --set LEGACY
-          changed_when: true
+          changed_when:
+            - true
           when:
             - elastic_repo_current_crypto_policy.stdout != "LEGACY"
           notify:
